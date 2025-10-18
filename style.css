@@ -1,0 +1,33 @@
+.page-container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header
+{
+	text-align: center;
+}
+
+.tiles-container
+{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.tile-row
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.tile
+{
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+}

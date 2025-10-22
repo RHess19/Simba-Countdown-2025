@@ -52,7 +52,7 @@
 	height: 100%;
 }
 
-.inside-image
+.door-image
 {
 	z-index: 2;
 	transform-origin: left;
@@ -60,12 +60,12 @@
 	backface-visibility: hidden;
 }
 
-.door-image
+.inside-image
 {
 	z-index: 1;
 }
 
-.door.opened .inside-image
+.door.opened .door-image
 {
 	transform: rotateY(-180deg);
 }

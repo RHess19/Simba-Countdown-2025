@@ -1,47 +1,65 @@
 /* CUSTOM CURSOR - SIMBA PAW?? */
 
+.body
+{
+	background-color: #ff3f31;
+}
+
 .page-container
 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: #ff3f31;
+	border-radius: 15px;
+	box-shadow: -5px 5px #aa3f31;
 }
 
 .header
 {
 	text-align: center;
+	border-radius: 15px;
+	background-color: #dd3f31;
+	margin: 15px;
+	box-shadow: -5px 5px #aa3f31;
 }
-
-.tiles-container
+.heading
 {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	color: skyblue;
+	font-weight: bold;
+	font-size: 32px;
 }
 
-.tile-row
+.tiles-container, .final-tile
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
 }
 
 .door
 {
-	width: 100px;
-	height: 100px;
+	width: 300px;
+	height: 300px;
+}
+
+.final-door
+{
+	width: 500px;
+	height: 500px;
 	border-radius: 5px;
 }
 
-.door
+.door, .final-door
 {
 	position: relative;
 	cursor: pointer;
 	perspective: 1000px;
 }
 
-.door img
+.door img, .final-door img
 {
 	position: absolute;
 	top: 0;

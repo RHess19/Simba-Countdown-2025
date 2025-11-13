@@ -2,7 +2,7 @@
 
 .body
 {
-	background-color: #ff3f31;
+	background-color: #c3e4f9;
 }
 
 .page-container
@@ -10,27 +10,27 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: #ff3f31;
+	background-color: #c3e4f9;
 	border-radius: 15px;
-	box-shadow: -5px 5px #aa3f31;
+	box-shadow: -5px 5px #82c6f2;
 }
 
 .header
 {
 	text-align: center;
 	border-radius: 15px;
-	background-color: #dd3f31;
+	background-color: #a8daf9;
 	margin: 15px;
-	box-shadow: -5px 5px #aa3f31;
+	box-shadow: -5px 5px #82c6f2;
 }
 .heading
 {
-	color: skyblue;
+	color: #529cf2;
 	font-weight: bold;
 	font-size: 32px;
 }
 
-.tiles-container, .final-tile
+.tiles-container
 {
 	display: flex;
 	flex-direction: row;
@@ -41,31 +41,21 @@
 
 .door
 {
-	width: 300px;
-	height: 300px;
-}
-
-.final-door
-{
-	width: 500px;
-	height: 500px;
-	border-radius: 5px;
-}
-
-.door, .final-door
-{
+	width: 400px;
+	height: 400px;
+	object-fit: contain;
 	position: relative;
-	cursor: pointer;
 	perspective: 1000px;
+	cursor: pointer;
 }
 
-.door img, .final-door img
+.door img
 {
 	position: absolute;
-	top: 0;
+	/*top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 100%;*/
 }
 
 .door-image
@@ -74,11 +64,28 @@
 	transform-origin: left;
 	transition: transform 1s ease;
 	backface-visibility: hidden;
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	flex: 1 1 auto;
+	top: 0;
+	left: 0;
+
+/* new */
+	width: 100%;
+	height: 100%;
 }
 
 .inside-image
 {
 	z-index: 1;
+
+	/* new */
+	width: 100px;
+	height: 100px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	bottom: 0;
 }
 
 .door.opened .door-image

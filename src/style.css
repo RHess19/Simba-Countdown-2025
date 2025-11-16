@@ -28,6 +28,7 @@
 	font-size: 32px;
 }
 
+
 .tiles-container
 {
 	display: flex;
@@ -36,6 +37,7 @@
 	justify-content: space-around;
 	gap: 10px;
 }
+
 
 .door
 {
@@ -77,9 +79,15 @@
 	transform: translate(-50%, 0%);
 	bottom: 0;
 	margin-bottom: 35px;
+	visibility: hidden;
 }
 
 .door.opened .door-image
 {
 	transform: rotateY(-180deg);
+}
+
+.door.opened .inside-image
+{
+	visibility: visible;
 }

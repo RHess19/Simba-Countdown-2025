@@ -42,7 +42,7 @@
 .door
 {
 	width: 700px;
-	height: 850px;
+	height: 700px;
 	object-fit: contain;
 	position: relative;
 	perspective: 1000px;
@@ -76,10 +76,11 @@
 	max-width: 300px;
 	height: auto;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%) scale(0);
 	bottom: 0;
-	margin-bottom: 35px;
+	margin-bottom: 45px;
 	visibility: hidden;
+	transition: transform 0.5s ease 0.5s;
 }
 
 .door.opened .door-image
@@ -90,4 +91,5 @@
 .door.opened .inside-image
 {
 	visibility: visible;
+	transform: translate(-50%, 0%) scale(1);
 }

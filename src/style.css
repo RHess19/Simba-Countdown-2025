@@ -54,6 +54,16 @@
 	position: absolute;
 }
 
+.lock-image
+{
+	z-index: 3;
+	max-width: 200px;
+	height: auto;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%, 75%);
+}
+
 .door-image
 {
 	z-index: 2;

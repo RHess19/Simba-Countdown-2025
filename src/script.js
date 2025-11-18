@@ -100,17 +100,3 @@ if(currentDayElement)
 		});
 	});
 }
-
-// On click of a tile flip it if the date is today
-// Otherwise, notify user that they have to wait until the date
-
-// Loop through each date, apply the proper
-// showing/hiding/enabling/disabling/opening/closing based on today's date
-
-// const presents = document.querySelectorAll('.door');
-
-// presents.forEach(day => {
-// 	day.addEventListener('click', () => {
-// 		day.classList.add('opened');
-// 	});
-// });

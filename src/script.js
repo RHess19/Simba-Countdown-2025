@@ -59,9 +59,29 @@ const dateIdMap = {
 // Show lock icon over tiles later than today
 // Remove lock icon for today's tile, but do not open
 Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
+	const doorElement = document.querySelector(doorID);
+	if(!doorElement) return;
+
+	const lockImage = doorElement.querySelector('.lock-image');
+
 	if(dateVar < currentDate)
 	{
-		alert(doorID);
+		doorElement.classList.add('opened');
+		if(lockImage) lockImage.style.display = 'none';
+	}
+	else if(dateVar.getTime() === currentDate.getTime())
+	{
+		if(lockImage) lockImage.style.display = 'none';
+
+		doorElement.addEventListener('click', () => {
+			doorElement.classList.add('opened');
+		});
+	}
+	else
+	{
+		doorElement.addEventListener('click', () => {
+			alert("Come back later to see another Simba picture!");
+		});
 	}
 });
 
@@ -71,10 +91,10 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 // Loop through each date, apply the proper
 // showing/hiding/enabling/disabling/opening/closing based on today's date
 
-const presents = document.querySelectorAll('.door');
+// const presents = document.querySelectorAll('.door');
 
-presents.forEach(day => {
-	day.addEventListener('click', () => {
-		day.classList.add('opened');
-	});
-});
+// presents.forEach(day => {
+// 	day.addEventListener('click', () => {
+// 		day.classList.add('opened');
+// 	});
+// });

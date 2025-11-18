@@ -65,16 +65,17 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 	const doorElement = document.querySelector(doorID);
 	if(!doorElement) return;
 
-	const lockImage = doorElement.querySelector('.lock-image');
+	//const lockImage = doorElement.querySelector('.lock-image');
+	const doorImage = doorElement.querySelector('.door-image');
 
 	if(dateVar < currentDate)
 	{
 		doorElement.classList.add('opened');
-		if(lockImage) lockImage.style.display = 'none';
+		//if(lockImage) lockImage.style.display = 'none';
 	}
 	else if(dateVar.getTime() === currentDate.getTime())
 	{
-		if(lockImage) lockImage.style.display = 'none';
+		//if(lockImage) lockImage.style.display = 'none';
 
 		doorElement.addEventListener('click', () => {
 			doorElement.classList.add('opened');
@@ -88,6 +89,8 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 		doorElement.addEventListener('click', () => {
 			alert("Come back later to see another Simba picture!");
 		});
+		//doorImage.classList.add('faded');
+		// lockImage.classList.add('not-faded');
 	}
 });
 

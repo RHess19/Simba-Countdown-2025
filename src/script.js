@@ -55,6 +55,9 @@ const dateIdMap = {
 	"#present25": date25
 };
 
+const scrollToCurrentDayButton = document.getElementById('scrollToCurrentDay');
+let currentDayElement = null;
+
 // On page load, open all tiles whose dates are before today
 // Show lock icon over tiles later than today
 // Remove lock icon for today's tile, but do not open
@@ -76,6 +79,9 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 		doorElement.addEventListener('click', () => {
 			doorElement.classList.add('opened');
 		});
+
+		currentDayElement = doorElement;
+		scrollToCurrentDayButton.style.display = 'block';
 	}
 	else
 	{
@@ -84,6 +90,16 @@ Object.entries(dateIdMap).forEach(([doorID, dateVar]) => {
 		});
 	}
 });
+
+if(currentDayElement)
+{
+	scrollToCurrentDayButton.addEventListener('click', () => {
+		currentDayElement.scrollIntoView({
+			behavior: 'smooth',
+			block: 'center'
+		});
+	});
+}
 
 // On click of a tile flip it if the date is today
 // Otherwise, notify user that they have to wait until the date

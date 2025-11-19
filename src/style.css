@@ -82,6 +82,26 @@ body
 	font-size: 32px;
 }
 
+.countdown-timer
+{
+	font-size: 24px;
+	color: #529cf2;
+	font-weight: bold;
+}
+
+.timer-container p
+{
+	font-size: 20px;
+	color: #529cf2;
+	font-weight: bold;
+}
+
+.heading-and-timer-container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
 .tiles-container
 {

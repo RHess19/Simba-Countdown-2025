@@ -3,6 +3,87 @@ body
 	background-color: lightblue;
 }
 
+#hamburgerMenu
+{
+	display: block;
+	position: fixed;
+	top: 30px;
+	left: 40px;
+	z-index: 1000;
+
+	background-color: #529cf2;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 15px;
+	font-weight: bold;
+	font-size: 24px;
+	cursor: pointer;
+	box-shadow: -3px 3px #82c6f2;
+	transition: transform 0.2s ease;
+}
+
+#hamburgerMenu:hover
+{
+	transform: scale(1.05);
+}
+
+#hamburgerMenu:active
+{
+	transform: scale(0.95);
+}
+
+#sidebarMenu
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100px;
+	background-color: #529cf2;
+	color: white;
+	z-index: 999;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+	transform: translateX(-250px);
+	transition: transform 0.3s ease-in-out;
+	padding: 0;
+	margin: 0;
+}
+
+#sidebarMenu.open
+{
+	transform: translateX(0);
+}
+
+.menu-list
+{
+	list-style: none;
+	padding: 100px 0 0 0;
+	margin: 0;
+}
+
+.menu-list li a
+{
+	background-color: #529cf2;
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	transition: background-color 0.2s;
+}
+
+.menu-list li a:hover
+{
+	background-color: #82c6f2;
+}
+
+.page-container.menu-open
+{
+	transition: filter 0.3s ease-in-out;
+}
+
 #scrollToCurrentDay
 {
 	display: none;
@@ -42,6 +123,13 @@ body
 	.snowflake
 	{
 		display: none;
+	}
+
+	#hamburgerMenu {
+		top: 10px;
+		left: 10px; 
+		padding: 8px 12px;
+		font-size: 20px;
 	}
 }
 
@@ -111,7 +199,6 @@ body
 	justify-content: space-around;
 	gap: 10px;
 }
-
 
 .door
 {
